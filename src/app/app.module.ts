@@ -12,12 +12,18 @@ import {AUTH_SERVICE} from './auth.service';
 import {RouterModule} from '@angular/router';
 
 import {routes} from './routes';
+import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppLoginComponent,
-    MenuComponent
+    MenuComponent,
+    HomeComponent,
+    DashboardComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
