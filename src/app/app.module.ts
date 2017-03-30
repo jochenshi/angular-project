@@ -15,6 +15,7 @@ import {routes} from './routes';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MapComponent } from './map/map.component';
+import { AppHeaderComponent } from './app-header/app-header.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MapComponent } from './map/map.component';
     MenuComponent,
     HomeComponent,
     DashboardComponent,
-    MapComponent
+    MapComponent,
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,

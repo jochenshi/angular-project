@@ -29,5 +29,8 @@ export class AppLoginComponent implements OnInit {
   onSubmit(value) {
     console.log('you submit value', value);
     this.log.login(value.username, value.password);
+    if (this.log.isLoggedIn()) {
+      this.route.navigate(['menu']);
+    }
   }
 }

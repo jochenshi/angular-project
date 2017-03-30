@@ -1,10 +1,8 @@
-<p>
-  menu works!
-</p>
 <div>
-  <ul>
+  <ul class="app-nav">
     <li routerLinkActive="active"><a [routerLink]="['/home']">Home</a></li>
     <li routerLinkActive="active"><a [routerLink]="['/dashboard']">Dashboard</a></li>
     <li routerLinkActive="active"><a [routerLink]="['/map']">Map</a></li>
   </ul>
+  <div (click)="logout()">Log out</div>
 </div>
