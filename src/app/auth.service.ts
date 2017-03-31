@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class AuthService {
+  msg: Boolean = false;
+  text: string;
 
   constructor() {
   }
@@ -21,6 +23,12 @@ export class AuthService {
   }
   isLoggedIn() {
     return this.getUser() !== null;
+  }
+  openMessage(val?: string) {
+    this.msg = !this.msg;
+    if (val) {
+      this.text = val;
+    }
   }
 }
 

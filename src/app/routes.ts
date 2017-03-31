@@ -9,11 +9,17 @@ import {HomeComponent} from './home/home.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {MapComponent} from './map/map.component';
 
-export const routes: Routes = [
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
-  {path: 'login', component: AppLoginComponent},
-  {path: 'menu', component: MenuComponent},
+const childRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'map', component: MapComponent}
+];
+
+export const routes: Routes = [
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: 'login', component: AppLoginComponent},
+  {path: 'menu', component: MenuComponent, children: childRoutes},
+  /*{path: 'home', component: HomeComponent},
+  {path: 'dashboard', component: DashboardComponent},
+  {path: 'map', component: MapComponent}*/
 ];

@@ -10,11 +10,12 @@ import {Router} from '@angular/router';
 })
 export class AppLoginComponent implements OnInit {
   myForm: FormGroup;
+  message: string;
 
   constructor(fb: FormBuilder,
-              public log: AuthService,
+              public logservice: AuthService,
               private route: Router) {
-    if (this.log.isLoggedIn()) {
+    if (this.logservice.isLoggedIn()) {
       this.route.navigate(['menu']);
     }
     this.myForm = fb.group({
@@ -28,8 +29,14 @@ export class AppLoginComponent implements OnInit {
 
   onSubmit(value) {
     console.log('you submit value', value);
-    this.log.login(value.username, value.password);
-    if (this.log.isLoggedIn()) {
+    if (!this.logservice.login(value.username, value.password)) {
+      this.message = 'Incorrect username or password!';
+      setTimeout( () => {
+        this.message = '';
+      }, 2500);
+    }
+    // this.logservice.login(value.username, value.password);
+    if (this.logservice.isLoggedIn()) {
       this.route.navigate(['menu']);
     }
   }

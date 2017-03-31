@@ -17,6 +17,7 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.log.openMessage('qiuqiu');
   }
 
   logout() {

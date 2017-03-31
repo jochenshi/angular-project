@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MapComponent } from './map/map.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AppHeaderComponent } from './app-header/app-header.component';
     HomeComponent,
     DashboardComponent,
     MapComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,9 @@ import { AppHeaderComponent } from './app-header/app-header.component';
     AUTH_SERVICE,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    MessageComponent
+  ]
 })
 export class AppModule { }

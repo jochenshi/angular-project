@@ -1,8 +1,9 @@
 <div>
   <ul class="app-nav">
-    <li routerLinkActive="active"><a [routerLink]="['/home']">Home</a></li>
-    <li routerLinkActive="active"><a [routerLink]="['/dashboard']">Dashboard</a></li>
-    <li routerLinkActive="active"><a [routerLink]="['/map']">Map</a></li>
+    <li><a [routerLink]="['home']">Home</a></li>
+    <li><a [routerLink]="['dashboard']">Dashboard</a></li>
+    <li><a [routerLink]="['map']">Map</a></li>
   </ul>
   <div (click)="logout()">Log out</div>
 </div>
+<router-outlet></router-outlet>

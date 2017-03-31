@@ -25,4 +25,10 @@
       <div class="hidden content">Please click</div>
     </div>
   </form>
+  <div *ngIf="logservice.getUser()">
+    logged in as <b>{{logservice.getUser()}}</b>
+  </div>
+  <div class="alert warning" role="alert" *ngIf="message">
+    {{ message }}
+  </div>
 </div>
