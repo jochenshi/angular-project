@@ -24,12 +24,6 @@ export class AuthService {
   isLoggedIn() {
     return this.getUser() !== null;
   }
-  openMessage(val?: string) {
-    this.msg = !this.msg;
-    if (val) {
-      this.text = val;
-    }
-  }
 }
 
 export const AUTH_SERVICE: Array<any> = [

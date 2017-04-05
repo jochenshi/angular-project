@@ -17,6 +17,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MapComponent } from './map/map.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { MessageComponent } from './message/message.component';
+import {HtmlOutlet} from '../htmloutlet';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MessageComponent } from './message/message.component';
     DashboardComponent,
     MapComponent,
     AppHeaderComponent,
-    MessageComponent
+    MessageComponent,
+    HtmlOutlet
   ],
   imports: [
     BrowserModule,
